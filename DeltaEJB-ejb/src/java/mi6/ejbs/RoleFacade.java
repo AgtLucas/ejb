@@ -16,7 +16,7 @@ import mi6.entity.Role;
  * @author AgtLucas
  */
 @Stateless
-public class RoleFacade extends AbstractFacade<Role> implements RoleFacadeLocal {
+public class RoleFacade /*extends AbstractFacade<Role>*/ implements RoleFacadeLocal {
     @PersistenceContext(unitName = "DeltaEJB-ejbPU")
     private EntityManager em;
 
