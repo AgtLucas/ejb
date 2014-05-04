@@ -8,18 +8,21 @@ package mi6.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import mi6.ejbs.UserFacadeLocal;
+import mi6.entity.User;
 
 /**
  *
  * @author AgtLucas
  */
 @WebServlet(name = "AddUser", urlPatterns = {"/AddUser"})
-public class AddUser extends HttpServlet {
+public class AddUserServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -30,8 +33,16 @@ public class AddUser extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+    
+    @EJB
+    private UserFacadeLocal ufl;
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
+        User u = new User();
+        u.setName(request.getParameter("name"));
+        
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
@@ -41,7 +52,12 @@ public class AddUser extends HttpServlet {
             out.println("<title>Servlet AddUser</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet AddUser at " + request.getContextPath() + "</h1>");
+            if (u.getName() == null) {
+                out.println("<h1>Invalid operation: AddUser?nome=yourNameGoesHere</h1>");
+            } else {
+                out.println("<h1>Name: " + u.getName() + "</h1>");
+                ufl.create(u);
+            }
             out.println("</body>");
             out.println("</html>");
         }
