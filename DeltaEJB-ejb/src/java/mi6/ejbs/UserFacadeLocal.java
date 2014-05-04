@@ -8,8 +8,8 @@ package mi6.ejbs;
 
 import java.util.List;
 import javax.ejb.Local;
-import mi6.ejbs.exceptions.NoneexistentEntityException.NonexistentEntityException;
 import mi6.entity.User;
+import mi6.ejbs.exceptions.NoneexistentEntityException.NonexistentEntityException;
 
 /**
  *
