@@ -65,7 +65,7 @@ public class User implements Serializable {
 
     @Override
     public String toString() {
-        return "org.samples.entities.User[ id=" + id + " ]";
+        return this.getClass().getName() + " [ id=" + id + " name=" + name + " ]";
     }
     
 }
