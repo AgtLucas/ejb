@@ -6,6 +6,7 @@
 
 package mi6.ejbs;
 
+import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -21,12 +22,22 @@ public class UserRoleFacade extends AbstractFacade<UserRole> implements UserRole
     private EntityManager em;
 
     @Override
-    protected EntityManager getEntityManager() {
+    public EntityManager getEntityManager() {
         return em;
     }
 
     public UserRoleFacade() {
         super(UserRole.class);
+    }
+
+    @Override
+    public List<UserRole> finUserRoleEntities() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List<UserRole> findUserRoleEntities(int maxResults, int firstResult) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

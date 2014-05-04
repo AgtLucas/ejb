@@ -8,6 +8,7 @@ package mi6.ejbs;
 
 import java.util.List;
 import javax.ejb.Local;
+import javax.persistence.EntityManager;
 import mi6.entity.UserRole;
 import mi6.ejbs.exceptions.NoneexistentEntityException.NonexistentEntityException;
 
@@ -17,12 +18,18 @@ import mi6.ejbs.exceptions.NoneexistentEntityException.NonexistentEntityExceptio
  */
 @Local
 public interface UserRoleFacadeLocal {
+    
+    public EntityManager getEntityManager();
+    
+    public List<UserRole> finUserRoleEntities();
+    
+    public List<UserRole> findUserRoleEntities(int maxResults, int firstResult);
 
-    void create(UserRole userRole);
+    public void create(UserRole userRole);
 
-    void edit(UserRole userRole) throws NonexistentEntityException;
+    public void edit(UserRole userRole) throws NonexistentEntityException;
 
-    void remove(UserRole userRole) throws NonexistentEntityException;
+    public void remove(UserRole userRole) throws NonexistentEntityException;
 
     UserRole find(Object id);
 
