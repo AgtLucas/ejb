@@ -98,7 +98,7 @@ public class UserRoleFacade implements UserRoleFacadeLocal, Serializable {
             CriteriaQuery cq = em.getCriteriaBuilder().createQuery();
             cq.select(cq.from(UserRole.class));
             Query q = em.createQuery(cq);
-            if (!all) {
+            if (!b) {
                 q.setMaxResults(maxResults);
                 q.setFirstResult(firstResult);
             }
