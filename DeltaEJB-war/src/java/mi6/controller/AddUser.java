@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package mi6.servlet;
+package mi6.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
