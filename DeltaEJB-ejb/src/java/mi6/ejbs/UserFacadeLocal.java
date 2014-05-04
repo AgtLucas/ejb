@@ -8,6 +8,7 @@ package mi6.ejbs;
 
 import java.util.List;
 import javax.ejb.Local;
+import mi6.ejbs.exceptions.NoneexistentEntityException.NonexistentEntityException;
 import mi6.entity.User;
 
 /**
@@ -19,9 +20,9 @@ public interface UserFacadeLocal {
 
     void create(User user);
 
-    void edit(User user);
+    void edit(User user) throws NonexistentEntityException;
 
-    void remove(User user);
+    void remove(User user) throws NonexistentEntityException;
 
     User find(Object id);
 
