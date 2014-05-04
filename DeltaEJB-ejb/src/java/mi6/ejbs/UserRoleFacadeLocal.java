@@ -29,7 +29,7 @@ public interface UserRoleFacadeLocal {
 
     public void edit(UserRole userRole) throws NonexistentEntityException, Exception;
 
-    public void remove(UserRole userRole) throws NonexistentEntityException;
+    public void remove(Long user, Long role) throws NonexistentEntityException;
 
     UserRole find(Object id);
 
