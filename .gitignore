@@ -16,3 +16,4 @@ hs_err_pid*
 /build/
 /DeltaEJB-war/dist/
 /DeltaEJB-war/build/
+/DeltaEJB-ejb/setup/glassfish-resources.xml
