@@ -8,6 +8,7 @@ package mi6.ejbs;
 
 import java.util.List;
 import javax.ejb.Local;
+import javax.persistence.EntityManager;
 import mi6.entity.User;
 import mi6.ejbs.exceptions.NoneexistentEntityException.NonexistentEntityException;
 
@@ -17,14 +18,21 @@ import mi6.ejbs.exceptions.NoneexistentEntityException.NonexistentEntityExceptio
  */
 @Local
 public interface UserFacadeLocal {
+    
+    public EntityManager getEntityManager();
+    
+    public List<User> findUserEntities();
+    
+    public List<User> findUserEntities(int maxResults, int firstResult);
 
-    void create(User user);
+    public void create(User user);
 
-    void edit(User user) throws NonexistentEntityException;
+    public void edit(User user) throws NonexistentEntityException;
 
-    void remove(User user) throws NonexistentEntityException;
+    public void remove(long id) throws NonexistentEntityException;
 
     User find(Object id);
+    
 
     List<User> findAll();
 
