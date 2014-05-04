@@ -4,12 +4,12 @@
  * and open the template in the editor.
  */
 
-package mi6.exceptions;
+package mi6.ejbs.exceptions;
 
 /**
  *
  * @author AgtLucas
  */
-public class IllegalOrphanException {
+public class PreexistingEntityException {
     
 }
