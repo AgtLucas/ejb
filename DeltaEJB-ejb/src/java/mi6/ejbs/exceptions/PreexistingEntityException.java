@@ -10,6 +10,12 @@ package mi6.ejbs.exceptions;
  *
  * @author AgtLucas
  */
-public class PreexistingEntityException {
-    
+public class PreexistingEntityException extends Exception {
+    public PreexistingEntityException(String message, Throwable cause) {
+        super(message, cause);
+    }
+    public PreexistingEntityException(String message) {
+        super(message);
+    }
 }
+
