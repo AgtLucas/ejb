@@ -4,16 +4,9 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/Users/AgtLucas/NetBeansProjects/DeltaEJB/DeltaEJB-ejb/src/java/mi6/ejbs/UserFacade.java</file>
-            <file>file:/Users/AgtLucas/NetBeansProjects/DeltaEJB/DeltaEJB-ejb/src/java/mi6/ejbs/AbstractFacade.java</file>
-            <file>file:/Users/AgtLucas/NetBeansProjects/DeltaEJB/DeltaEJB-ejb/src/java/mi6/exceptions/PreexistingEntityException.java</file>
-            <file>file:/Users/AgtLucas/NetBeansProjects/DeltaEJB/DeltaEJB-ejb/src/java/mi6/entity/Role.java</file>
-            <file>file:/Users/AgtLucas/NetBeansProjects/DeltaEJB/DeltaEJB-ejb/src/java/mi6/entity/UserRole.java</file>
             <file>file:/Users/AgtLucas/NetBeansProjects/DeltaEJB/DeltaEJB-ejb/src/java/mi6/ejbs/UserRoleFacade.java</file>
-            <file>file:/Users/AgtLucas/NetBeansProjects/DeltaEJB/DeltaEJB-ejb/src/java/mi6/entity/User.java</file>
-            <file>file:/Users/AgtLucas/NetBeansProjects/DeltaEJB/DeltaEJB-ejb/src/java/mi6/exceptions/IllegalOrphanException.java</file>
             <file>file:/Users/AgtLucas/NetBeansProjects/DeltaEJB/DeltaEJB-ejb/src/java/mi6/ejbs/RoleFacade.java</file>
             <file>file:/Users/AgtLucas/NetBeansProjects/DeltaEJB/DeltaEJB-ejb/src/java/mi6/ejbs/RoleFacadeLocal.java</file>
-            <file>file:/Users/AgtLucas/NetBeansProjects/DeltaEJB/DeltaEJB-ejb/src/java/mi6/exceptions/NoneexistentEntityException.java</file>
             <file>file:/Users/AgtLucas/NetBeansProjects/DeltaEJB/DeltaEJB-ejb/src/java/mi6/ejbs/UserFacadeLocal.java</file>
             <file>file:/Users/AgtLucas/NetBeansProjects/DeltaEJB/DeltaEJB-ejb/src/java/mi6/ejbs/UserRoleFacadeLocal.java</file>
         </group>
