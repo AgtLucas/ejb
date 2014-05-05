@@ -14,16 +14,20 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import mi6.ejbs.RoleFacadeLocal;
-import mi6.entity.Role;
+import mi6.ejbs.UserRoleFacadeLocal;
+import mi6.entity.UserRole;
 
 /**
  *
  * @author AgtLucas
  */
-@WebServlet(name = "AddRoleServlet", urlPatterns = {"/addrole"})
-public class AddRoleServlet extends HttpServlet {
+@WebServlet(name = "AddUserRoleServlet", urlPatterns = {"/adduserrole"})
+public class AddUserRoleServlet extends HttpServlet {
 
+    
+    @EJB
+    private UserRoleFacadeLocal urfl;
+    
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -33,15 +37,11 @@ public class AddRoleServlet extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    
-    @EJB
-    private RoleFacadeLocal rfl;
-    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        Role r = new Role();
-        r.setName(request.getParameter("role"));
+        String ud = request.getParameter("u");
+        String rd = request.getParameter("r");
         
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
@@ -49,14 +49,16 @@ public class AddRoleServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet AddRoleServlet</title>");            
+            out.println("<title>Servlet AddUserRoleServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            if (r.getName() == null) {
-                out.println("<h1>Invalid operation: addrole?role=yourNameGoesHere</h1>");
+            if (ud == null || rd == null) {
+                out.println("<h1>Invalid operation:");
             } else {
-                out.println("<h1>Name: " + r.getName() + "</h1>");
-                rfl.create(r);
+                UserRole ur = new UserRole();
+                ur.setUserId(Long.parseLong(ud));
+                ur.setRoleId(Long.parseLong(rd));
+                urfl.create(ur);
             }
             out.println("</body>");
             out.println("</html>");
