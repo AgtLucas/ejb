@@ -21,7 +21,7 @@ import mi6.entity.User;
  *
  * @author AgtLucas
  */
-@WebServlet(name = "AddUser", urlPatterns = {"/AddUser"})
+@WebServlet(name = "AddUserServlet", urlPatterns = {"/adduser"})
 public class AddUserServlet extends HttpServlet {
 
     /**
