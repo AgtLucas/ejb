@@ -8,9 +8,7 @@ package mi6.ejbs;
 
 import java.util.List;
 import javax.ejb.Local;
-import javax.persistence.EntityManager;
 import mi6.entity.Role;
-import mi6.ejbs.exceptions.NoneexistentEntityException.NonexistentEntityException;
 
 /**
  *
@@ -18,18 +16,12 @@ import mi6.ejbs.exceptions.NoneexistentEntityException.NonexistentEntityExceptio
  */
 @Local
 public interface RoleFacadeLocal {
-    
-    public EntityManager getEntityManager();
-    
-    public List<Role> findRoleEntities();
-    
-    public List<Role> findRoleEntities(int maxResults, int firstResult);
 
-    public void create(Role role);
+    void create(Role role);
 
-    public void edit(Role role) throws NonexistentEntityException;
+    void edit(Role role);
 
-    public void remove(long id) throws NonexistentEntityException;
+    void remove(Role role);
 
     Role find(Object id);
 
