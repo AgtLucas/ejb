@@ -53,7 +53,7 @@ public class AddUserServlet extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             if (u.getName() == null) {
-                out.println("<h1>Invalid operation: AddUser?nome=yourNameGoesHere</h1>");
+                out.println("<h1>Invalid operation: AddUser?name=yourNameGoesHere</h1>");
             } else {
                 out.println("<h1>Name: " + u.getName() + "</h1>");
                 ufl.create(u);
