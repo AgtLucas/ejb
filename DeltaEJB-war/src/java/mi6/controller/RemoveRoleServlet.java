@@ -56,7 +56,7 @@ public class RemoveRoleServlet extends HttpServlet {
                 Role r = new Role();
                 r.setId(Long.parseLong(rd));
                 rfl.remove(r);
-                response.sendRedirect("listuser");
+                response.sendRedirect("listrole");
             }
             out.println("</body>");
             out.println("</html>");
