@@ -13,6 +13,10 @@ a {
     color: #08c;
 }
 
+form {
+    display: block;
+}
+
 .main {
     width: 60em;
     max-width: 100%;
@@ -31,7 +35,9 @@ ul {
     background: #08c;
     color: white;
     text-transform: uppercase;
-    display: inline-block;
+    text-align: center;
+    display: block;
+    max-width: 60px;
     padding: 5px 15px;
     margin: 20px 0;
 }
