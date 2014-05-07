@@ -54,10 +54,13 @@ public class AddRoleServlet extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             if (r.getName() == null) {
-                out.println("<h1>Invalid operation: addrole?role=yourNameGoesHere</h1>");
+                out.println("<form id=\"createForm\" name=\"createForm\" method=\"POST\">");
+                out.println("<label>Role</label>");
+                out.println("<input type=\"text\" id=\"user\" name=\"role\" />");
+                out.println("<button type=\"submit\" name=\"btn\" value=\"val\">Enviar</button>");
             } else {
-                out.println("<h1>Name: " + r.getName() + "</h1>");
                 rfl.create(r);
+                response.sendRedirect("listrole");
             }
             out.println("</body>");
             out.println("</html>");
