@@ -54,7 +54,7 @@ public class AddRoleServlet extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             if (r.getName() == null) {
-                out.println("<form id=\"createForm\" name=\"createForm\" method=\"POST\">");
+                out.println("<form method=\"POST\">");
                 out.println("<label>Role</label>");
                 out.println("<input type=\"text\" id=\"user\" name=\"role\" />");
                 out.println("<button type=\"submit\" name=\"btn\" value=\"val\">Enviar</button>");

@@ -55,7 +55,7 @@ public class AddUserServlet extends HttpServlet {
             out.println("<body>");
             out.println("<div class=\"main\">");
             if (u.getName() == null) {
-                out.println("<form id=\"createForm\" name=\"createForm\" method=\"POST\">");
+                out.println("<form method=\"POST\">");
                 out.println("<label>User</label>");
                 out.println("<input type=\"text\" id=\"user\" name=\"name\" />");
                 out.println("<button type=\"submit\" name=\"btn\" value=\"val\">Enviar</button>");
