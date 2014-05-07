@@ -53,6 +53,7 @@ public class AddRoleServlet extends HttpServlet {
             out.println("<link rel=\"stylesheet\" href=\"css/style.css\"/>");
             out.println("</head>");
             out.println("<body>");
+            out.println("<div class=\"main\">");
             if (r.getName() == null) {
                 out.println("<form method=\"POST\">");
                 out.println("<label>Role</label>");
@@ -63,6 +64,7 @@ public class AddRoleServlet extends HttpServlet {
                 response.sendRedirect("listrole");
             }
             out.println("<a class=\"go-back\" href=\"index.html\">Home</a>");
+            out.println("</div>");
             out.println("</body>");
             out.println("</html>");
         }
