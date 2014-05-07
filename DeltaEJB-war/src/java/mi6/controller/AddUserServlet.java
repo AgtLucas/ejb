@@ -53,10 +53,13 @@ public class AddUserServlet extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             if (u.getName() == null) {
-                out.println("<h1>Invalid operation: AddUser?name=yourNameGoesHere</h1>");
+                out.println("<form id=\"createForm\" name=\"createForm\" method=\"POST\">");
+                out.println("<label>User</label>");
+                out.println("<input type=\"text\" id=\"user\" name=\"name\" />");
+                out.println("<button type=\"submit\" name=\"btn\" value=\"val\">Enviar</button>");
             } else {
-                out.println("<h1>Name: " + u.getName() + "</h1>");
                 ufl.create(u);
+                response.sendRedirect("listuser");
             }
             out.println("</body>");
             out.println("</html>");
