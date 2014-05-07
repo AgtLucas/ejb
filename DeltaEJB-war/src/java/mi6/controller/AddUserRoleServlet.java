@@ -59,6 +59,7 @@ public class AddUserRoleServlet extends HttpServlet {
                 ur.setUserId(Long.parseLong(ud));
                 ur.setRoleId(Long.parseLong(rd));
                 urfl.create(ur);
+                response.sendRedirect("listuser");
             }
             out.println("</body>");
             out.println("</html>");
