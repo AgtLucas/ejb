@@ -52,6 +52,7 @@ public class EditUserServlet extends HttpServlet {
             out.println("<link rel=\"stylesheet\" href=\"css/style.css\"/>");
             out.println("</head>");
             out.println("<body>");
+            out.println("<div class=\"main\">");
             
             if (uname == null) {
                 out.println("<form method=\"POST\">");
@@ -62,7 +63,7 @@ public class EditUserServlet extends HttpServlet {
                 out.println("<input type=\"text\" id=\"name\" name=\"uname\" value= " + uf.getName() + ">");
                 out.println("<button type=\"submit\" name=\"btn\" value=\"val\">Enviar</button>");
                 out.println("</form>");
-                out.println("<a href=\"index.html\">Pagina Inicial</a>");
+                out.println("<a class=\"go-back\" href=\"index.html\">Home</a>");
             } else {
                 User uf = ufl.find(Long.parseLong(uid));
                 uf.setName(uname);
@@ -70,6 +71,7 @@ public class EditUserServlet extends HttpServlet {
                 response.sendRedirect("listuser");
             }
             
+            out.println("</div>");
             out.println("</body>");
             out.println("</html>");
         }

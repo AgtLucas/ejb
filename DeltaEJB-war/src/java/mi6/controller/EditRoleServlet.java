@@ -51,6 +51,7 @@ public class EditRoleServlet extends HttpServlet {
             out.println("<title>Servlet EditRoleServlet</title>");            
             out.println("</head>");
             out.println("<body>");
+            out.println("<div class=\"main\">");
             
             if (rname == null) {
                 out.println("<form method=\"POST\">");
@@ -67,7 +68,8 @@ public class EditRoleServlet extends HttpServlet {
                 rfl.edit(uf);
                 response.sendRedirect("listrole");
             }
-            
+            out.println("<a class=\"go-back\" href=\"index.html\">Home</a>");
+            out.println("</div>");
             out.println("</body>");
             out.println("</html>");
         }
