@@ -26,3 +26,16 @@ ul {
 .list-actions li {
     margin: 5px 0;
 }
+
+.go-back {
+    background: #08c;
+    color: white;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 5px 15px;
+    margin: 20px 0;
+}
+
+.go-back:hover {
+    background: #666;
+}
