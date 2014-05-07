@@ -3,11 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/Users/AgtLucas/NetBeansProjects/DeltaEJB/DeltaEJB-war/web/css/style.css</file>
             <file>file:/Users/AgtLucas/NetBeansProjects/DeltaEJB/DeltaEJB-war/src/java/mi6/controller/AddUserServlet.java</file>
             <file>file:/Users/AgtLucas/NetBeansProjects/DeltaEJB/DeltaEJB-war/src/java/mi6/controller/RemoverUserServlet.java</file>
+            <file>file:/Users/AgtLucas/NetBeansProjects/DeltaEJB/DeltaEJB-war/web/index.html</file>
             <file>file:/Users/AgtLucas/NetBeansProjects/DeltaEJB/DeltaEJB-war/src/java/mi6/controller/ListUserServlet.java</file>
+            <file>file:/Users/AgtLucas/NetBeansProjects/DeltaEJB/DeltaEJB-war/src/java/mi6/controller/ListRoleServlet.java</file>
             <file>file:/Users/AgtLucas/NetBeansProjects/DeltaEJB/DeltaEJB-war/src/java/mi6/controller/AddUserRoleServlet.java</file>
             <file>file:/Users/AgtLucas/NetBeansProjects/DeltaEJB/DeltaEJB-war/src/java/mi6/controller/AddRoleServlet.java</file>
+            <file>file:/Users/AgtLucas/NetBeansProjects/DeltaEJB/DeltaEJB-war/src/java/mi6/controller/EditUserServlet.java</file>
         </group>
     </open-files>
 </project-private>
