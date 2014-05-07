@@ -8,11 +8,15 @@ package mi6.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
+import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import mi6.ejbs.RoleFacadeLocal;
+import mi6.entity.Role;
 
 /**
  *
@@ -20,6 +24,9 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "ListRoleServlet", urlPatterns = {"/listrole"})
 public class ListRoleServlet extends HttpServlet {
+    
+    @EJB
+    RoleFacadeLocal rfl;
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,6 +40,9 @@ public class ListRoleServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        
+        List<Role> roles = rfl.findAll();
+        
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
@@ -41,7 +51,11 @@ public class ListRoleServlet extends HttpServlet {
             out.println("<title>Servlet ListRoleServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet ListRoleServlet at " + request.getContextPath() + "</h1>");
+            Role r;
+            for (int i = 0; i < roles.size(); i++) {
+                r = (Role) roles.get(i);
+                out.println("<h1>" + r.getId() + " - " + r.getName() + "</h1>");
+            }
             out.println("</body>");
             out.println("</html>");
         }
