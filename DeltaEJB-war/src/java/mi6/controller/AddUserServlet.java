@@ -53,6 +53,7 @@ public class AddUserServlet extends HttpServlet {
             out.println("<link rel=\"stylesheet\" href=\"css/style.css\"/>");
             out.println("</head>");
             out.println("<body>");
+            out.println("<div class=\"main\">");
             if (u.getName() == null) {
                 out.println("<form id=\"createForm\" name=\"createForm\" method=\"POST\">");
                 out.println("<label>User</label>");
@@ -62,6 +63,7 @@ public class AddUserServlet extends HttpServlet {
                 ufl.create(u);
                 response.sendRedirect("listuser");
             }
+            out.println("</div>");
             out.println("</body>");
             out.println("</html>");
         }

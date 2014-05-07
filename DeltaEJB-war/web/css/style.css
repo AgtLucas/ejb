@@ -1,3 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+    background: #f3f3f3;
+}
+
+a {
+    text-decoration: none;
+    color: #08c;
+}
+
+.main {
+    width: 60em;
+    max-width: 100%;
+    margin: 60px auto;
+}
+
+.list-actions {
+    list-style: none;
+}
+
+.list-actions li {
+    margin: 5px 0;
 }
