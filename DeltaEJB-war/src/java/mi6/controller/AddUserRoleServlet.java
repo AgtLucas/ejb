@@ -49,7 +49,8 @@ public class AddUserRoleServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet AddUserRoleServlet</title>");            
+            out.println("<title>Servlet AddUserRoleServlet</title>");
+            out.println("<link rel=\"stylesheet\" href=\"css/style.css\"/>");
             out.println("</head>");
             out.println("<body>");
             if (ud == null || rd == null) {

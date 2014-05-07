@@ -48,7 +48,8 @@ public class RemoverUserServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet RemoverUserServlet</title>");            
+            out.println("<title>Servlet RemoverUserServlet</title>");
+            out.println("<link rel=\"stylesheet\" href=\"css/style.css\"/>");
             out.println("</head>");
             out.println("<body>");
             if (ud == null) {

@@ -48,7 +48,8 @@ public class ListRoleServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet ListRoleServlet</title>");            
+            out.println("<title>Servlet ListRoleServlet</title>");
+            out.println("<link rel=\"stylesheet\" href=\"css/style.css\"/>");
             out.println("</head>");
             out.println("<body>");
             Role r;

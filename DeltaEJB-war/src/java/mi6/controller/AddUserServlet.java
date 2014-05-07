@@ -49,7 +49,8 @@ public class AddUserServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet AddUser</title>");            
+            out.println("<title>Servlet AddUser</title>");
+            out.println("<link rel=\"stylesheet\" href=\"css/style.css\"/>");
             out.println("</head>");
             out.println("<body>");
             if (u.getName() == null) {

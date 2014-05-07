@@ -49,7 +49,8 @@ public class AddRoleServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet AddRoleServlet</title>");            
+            out.println("<title>Servlet AddRoleServlet</title>"); 
+            out.println("<link rel=\"stylesheet\" href=\"css/style.css\"/>");
             out.println("</head>");
             out.println("<body>");
             if (r.getName() == null) {
