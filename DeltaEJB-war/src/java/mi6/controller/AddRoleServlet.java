@@ -62,6 +62,7 @@ public class AddRoleServlet extends HttpServlet {
                 rfl.create(r);
                 response.sendRedirect("listrole");
             }
+            out.println("<a class=\"go-back\" href=\"index.html\">Home</a>");
             out.println("</body>");
             out.println("</html>");
         }
