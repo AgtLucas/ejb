@@ -63,6 +63,7 @@ public class AddUserServlet extends HttpServlet {
                 ufl.create(u);
                 response.sendRedirect("listuser");
             }
+            out.println("<a class=\"go-back\" href=\"index.html\">Home</a>");
             out.println("</div>");
             out.println("</body>");
             out.println("</html>");
