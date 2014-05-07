@@ -54,7 +54,7 @@ public class EditUserServlet extends HttpServlet {
             out.println("<body>");
             
             if (uname == null) {
-                out.println("<form id=\"createForm\" name=\"createForm\" method=\"POST\">");
+                out.println("<form method=\"POST\">");
                 out.println("<label>User ID " + uid + "</label>");
 
                 User uf = ufl.find(Long.parseLong(uid));
