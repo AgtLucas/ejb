@@ -52,11 +52,16 @@ public class ListRoleServlet extends HttpServlet {
             out.println("<link rel=\"stylesheet\" href=\"css/style.css\"/>");
             out.println("</head>");
             out.println("<body>");
-            Role r;
-            for (int i = 0; i < roles.size(); i++) {
-                r = (Role) roles.get(i);
-                out.println("<h1>" + r.getId() + " - " + r.getName() + "</h1>");
+            out.println("<div class=\"main\">");
+            out.println("<h1>List Roles</h1>");
+            out.println("<ul>");
+            Role o;
+            for (Role role : roles) {
+                o = (Role) role;
+                out.println("<li>" + o.getId() + " - " + o.getName() + "</li>");
             }
+            out.println("</ul>");
+            out.println("</div>");
             out.println("</body>");
             out.println("</html>");
         }

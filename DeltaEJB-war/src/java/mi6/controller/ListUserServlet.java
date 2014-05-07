@@ -53,11 +53,16 @@ public class ListUserServlet extends HttpServlet {
             out.println("<link rel=\"stylesheet\" href=\"css/style.css\"/>");
             out.println("</head>");
             out.println("<body>");
+            out.println("<div class=\"main\">");
+            out.println("<h1>List Users</h1>");
+            out.println("<ul>");
             User o;
-            for (int i = 0; i < users.size(); i++) {
-                o = (User) users.get(i);
-                out.println("<h1>" + o.getId() + " - " + o.getName() + "</h1>");
+            for (User user : users) {
+                o = (User) user;
+                out.println("<li>" + o.getId() + " - " + o.getName() + "</li>");
             }
+            out.println("</ul>");
+            out.println("</div>");
             out.println("</body>");
             out.println("</html>");
         } finally {
