@@ -53,8 +53,8 @@ public class EditRoleServlet extends HttpServlet {
             out.println("<body>");
             
             if (rname == null) {
-                out.println("<form id=\"createForm\" name=\"createForm\" method=\"POST\">");
-                out.println("<label>User ID " + rid + "</label>");
+                out.println("<form method=\"POST\">");
+                out.println("<label>Role ID " + rid + "</label>");
 
                 Role rf = rfl.find(Long.parseLong(rid));
 
@@ -65,7 +65,7 @@ public class EditRoleServlet extends HttpServlet {
                 Role uf = rfl.find(Long.parseLong(rid));
                 uf.setName(rname);
                 rfl.edit(uf);
-                response.sendRedirect("listuser");
+                response.sendRedirect("listrole");
             }
             
             out.println("</body>");
