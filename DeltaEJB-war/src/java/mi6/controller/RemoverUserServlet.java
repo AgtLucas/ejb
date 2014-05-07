@@ -57,7 +57,7 @@ public class RemoverUserServlet extends HttpServlet {
                 User u = new User();
                 u.setId(Long.parseLong(ud));
                 ufl.remove(u);
-//                response.sendRedirect("listuser");
+                response.sendRedirect("listuser");
             }
             out.println("</body>");
             out.println("</html>");
