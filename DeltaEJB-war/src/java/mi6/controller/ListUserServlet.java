@@ -62,6 +62,7 @@ public class ListUserServlet extends HttpServlet {
                 out.println("<li>" + o.getId() + " - " + o.getName() + "</li>");
             }
             out.println("</ul>");
+            out.println("<a class=\"go-back\" href=\"index.html\">Home</a>");
             out.println("</div>");
             out.println("</body>");
             out.println("</html>");

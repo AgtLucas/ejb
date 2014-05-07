@@ -48,7 +48,8 @@ public class EditRoleServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet EditRoleServlet</title>");            
+            out.println("<title>Servlet EditRoleServlet</title>");     
+            out.println("<link rel=\"stylesheet\" href=\"css/style.css\"/>");       
             out.println("</head>");
             out.println("<body>");
             out.println("<div class=\"main\">");
@@ -62,13 +63,13 @@ public class EditRoleServlet extends HttpServlet {
                 out.println("<input type=\"text\" id=\"name\" name=\"rname\" value= " + rf.getName() + ">");
                 out.println("<button type=\"submit\" name=\"btn\" value=\"val\">Ok</button>");
                 out.println("</form>");
+                out.println("<a class=\"go-back\" href=\"index.html\">Home</a>");
             } else {
                 Role uf = rfl.find(Long.parseLong(rid));
                 uf.setName(rname);
                 rfl.edit(uf);
                 response.sendRedirect("listrole");
             }
-            out.println("<a class=\"go-back\" href=\"index.html\">Home</a>");
             out.println("</div>");
             out.println("</body>");
             out.println("</html>");

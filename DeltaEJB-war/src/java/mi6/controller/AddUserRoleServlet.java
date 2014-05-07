@@ -53,7 +53,7 @@ public class AddUserRoleServlet extends HttpServlet {
             out.println("<link rel=\"stylesheet\" href=\"css/style.css\"/>");
             out.println("</head>");
             out.println("<body>");
-            out.println("<div class\"main\">");
+            out.println("<div class=\"main\">");
             if (ud == null || rd == null) {
                 out.println("<h1>Invalid operation:");
             } else {
